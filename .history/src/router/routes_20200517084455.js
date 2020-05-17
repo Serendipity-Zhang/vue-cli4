@@ -27,6 +27,7 @@ export default [
         children:[
           {
             path: '/List',
+            //name: 'loan-input',
             component: ()=>import('../views/List.vue'),
             meta:{
               title:'列表页'
@@ -41,6 +42,7 @@ export default [
         children:[
           {
             path: '/toSon',
+            //name: 'loan-input',
             component: ()=>import('../views/FtoS/index.vue'),
             meta:{
               title:'父传子'
@@ -55,6 +57,7 @@ export default [
         children:[
           {
             path: '/toFather',
+            //name: 'loan-input',
             component: ()=>import('../views/StoF/index.vue'),
             meta:{
               title:'子传父'
@@ -69,6 +72,7 @@ export default [
         children:[
           {
             path: '/toFather',
+            //name: 'loan-input',
             component: ()=>import('../views/StoF/index.vue'),
             meta:{
               title:'子传父'
@@ -83,6 +87,7 @@ export default [
         children:[
           {
             path: '/actionSon',
+            //name: 'loan-input',
             component: ()=>import('../views/FactionS/index.vue'),
             meta:{
               title:'时间轴'
@@ -97,6 +102,7 @@ export default [
         children:[
           {
             path: '/transfer',
+            //name: 'loan-input',
             component: ()=>import('../views/transfer.vue'),
             meta:{
               title:'穿梭框'
@@ -105,17 +111,65 @@ export default [
         ]
       },
       {
-        path: '/timeLine', 
+        path: '/transfer', 
         component: ()=>import('../layout/index'),
-        redirect:'/timeLine',
+        redirect:'/transfer',
         children:[
           {
-            path: '/timeLine',
-            component: ()=>import('../views/timeLine.vue'),
+            path: '/transfer',
+            //name: 'loan-input',
+            component: ()=>import('../views/transfer.vue'),
             meta:{
               title:'穿梭框'
             }
           }
         ]
       },
+
+    // {
+    //     path: '/', //路径
+    //     name: 'Home',
+    //     component: () =>
+    //         import ('../views/Banner.vue') //匹配的组件
+    // },
+    // {
+    //     path: '/home', //路径
+    //     component: () =>
+    //         import ('../views/home.vue') //匹配的组件
+    // },
+    // {
+    //     path: '/list', //路径
+    //     component: () =>
+    //         import ('../views/List.vue') //匹配的组件
+    // },
+    // {
+    //     path: '/transfer', //路径
+    //     component: () =>
+    //         import ('../views/transfer.vue') //匹配的组件
+    // },
+    // {
+    //     path: '/timeLine', //路径
+    //     component: () =>
+    //         import ('../views/timeLine.vue') //匹配的组件
+    // },
+    // {
+    //     path: '/toSon', //父-子
+    //     component: () =>
+    //         import ('../views/FtoS/index.vue') //匹配的组件
+    // },
+    // {
+    //     path: '/toFather', //子-父
+    //     component: () =>
+    //         import ('../views/StoF/index.vue') //匹配的组件
+    // },
+    // {
+    //     path: '/actionSon', //父操作子
+    //     component: () =>
+    //         import ('../views/FactionS/index.vue') //匹配的组件
+    // },
+    // {
+    //     path: '/actionSon', //父操作子
+    //     component: () =>
+    //         import ('../views/FactionS/index.vue') //匹配的组件
+    // }
 ]

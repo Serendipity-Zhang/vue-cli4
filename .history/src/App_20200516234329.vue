@@ -5,7 +5,7 @@
     <!-- 右侧内容 -->
     <!-- <div> -->
       <!-- 展示的出口 -->
-      <router-view />
+      <!-- <router-view /> -->
     <!-- </div> -->
   </div>
 </template>

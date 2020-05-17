@@ -1,12 +1,12 @@
 <template>
   <div id="app">
     <!-- 左侧内容 -->
-    <!-- <Nav /> -->
+    <Nav />
     <!-- 右侧内容 -->
-    <!-- <div> -->
+    <div>
       <!-- 展示的出口 -->
-      <router-view />
-    <!-- </div> -->
+      <!-- <router-view /> -->
+    </div>
   </div>
 </template>
 
