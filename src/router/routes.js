@@ -162,3 +162,39 @@ export default [
         ]
       },
 ]
+
+// Vue-详解设置路由导航的两种方法： <router-link :to="..."> 和router.push(...)
+// 	//声明式  <router-link :to="...">		
+// 	//编程式  router.push(...)
+
+// // 声明式的常见方式
+// <router-link to="/home">home</router-link>
+// // 对象
+// <router-link :to="{path:'/home'}">home</router-link>
+// // 路由通过名称
+// <router-link :to="{name: 'homename'}">home</router-link>
+// //直接路由带查询参数query，地址栏变成 /home?id=10
+// <router-link :to="{path: 'home', query: {id: 10 }}">home</router-link>
+// // 命名路由带查询参数query，地址栏变成/home?id=10
+// <router-link :to="{name: 'homename', query: {id: 10 }}">home</router-link>
+// //直接路由带路由参数params，params 不生效，如果提供了 path，params 会被忽略
+// <router-link :to="{path: 'home', params: { id: 10 }}">home</router-link>
+// // 命名路由带路由参数params，地址栏是/home/10
+// <router-link :to="{name: 'homename', params: { id: 10 }}">home</router-link>
+
+
+// 二、router.push(...)方法
+// // 字符串
+// router.push('/home')
+// // 对象
+// router.push({path:'/home'})
+// // 路由通过名称
+// router.push({name: 'homename'})
+// //直接路由带查询参数query，地址栏变成 /home?id=10
+// router.push({path: 'home', query: {id: 10 }})
+// // 命名路由带查询参数query，地址栏变成/home?id=10
+// router.push({name: 'homename', query: {id: 10 }})
+// //直接路由带路由参数params，params 不生效，如果提供了 path，params 会被忽略
+// router.push({path:'homename', params:{ id: 10 }})
+// // 命名路由带路由参数params，地址栏是/home/10
+// router.push({name:'homename', params:{ id: 10 }})
