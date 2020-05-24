@@ -6,9 +6,6 @@ import './assets/font/iconfont.css'  //字体图标
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 import moment from 'moment'
-import 'moment/locale/zh-cn'
-
-moment.locale('zh-cn')
 
 Vue.config.productionTip = false
 Vue.use(ElementUI);

@@ -5,7 +5,7 @@
     <div class="ui center aligned header">
       
       <h2 class="ui inverted header">
-        哈哈哈
+        Bruce Lee
       </h2>    
       <button class="ui inverted button" v-on:click="toggleCategory()"><i class="tag icon"></i> Category</button>
     </div>

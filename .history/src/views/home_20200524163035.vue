@@ -1,0 +1,69 @@
+<!-- 组件说明 -->
+<template>
+  <div class=''>
+    <!-- <Nav /> -->
+    <div>
+      <!-- <router-view /> -->
+    </div>
+    <!--  -->
+    <div id="content" v-bind:style="contentStyle" @click="clicked">
+		<div class="wrapper">
+			<p v-bind:style="instructionsStyle">{{instruction}}</p>
+			<h1 v-if="one" v-bind:class="faded">{{timeOne}}</h1>
+			<h1 v-if="two" v-bind:class="faded">{{timeTwo}}</h1>
+			<h1 v-if="three" v-bind:class="faded">{{timeThree}}</h1>
+			<h1 v-if="four" v-bind:class="faded">{{timeFour}}</h1>
+		</div>
+	</div>
+  </div>
+</template>
+
+<script>
+  // import Nav from './Nav'
+  export default {
+    components: {
+          //  Nav
+    },
+    data () {
+      return {
+        	contentStyle: {
+			backgroundColor: "#000000".replace(/0/g,function(){return (~~(Math.random()*16)).toString(16)})
+		},
+		timeOne: moment().format('LTS'),
+		timeTwo: moment().format('l'),
+		timeThree: moment().format('MMMM Do YY'),
+		timeFour: moment().format('LT'),
+		one: true,
+		two: false,
+		three: false,
+		four: false,
+		faded: '',
+		instruction: "Click anywhere to change the clock's format",
+		instructionsStyle: {
+			opacity: 1,
+			transition: '.2s'
+		}
+
+      };
+    },
+    computed: {
+
+    },
+    methods: {
+
+    },
+mounted() {
+
+},
+beforeCreate() {}, //生命周期 - 创建之前
+beforeMount() {}, //生命周期 - 挂载之前
+beforeUpdate() {}, //生命周期 - 更新之前
+updated() {}, //生命周期 - 更新之后
+beforeDestroy() {}, //生命周期 - 销毁之前
+destroyed() {}, //生命周期 - 销毁完成
+activated() {}, //如果页面有keep-alive缓存功能，这个函数会触发
+  }
+</script>
+
+<style>
+</style>

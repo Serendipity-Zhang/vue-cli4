@@ -124,10 +124,7 @@ h1{
 p{
   transform: .2s;
 }
-.faded{
-  opacity: 0;
-  transform: .2s;
-}
+.faded{}
 </style>
 
 

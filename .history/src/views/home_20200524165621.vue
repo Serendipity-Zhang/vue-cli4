@@ -20,7 +20,6 @@
 
 <script>
 // import Nav from './Nav'
-import moment from 'moment'
 export default {
   components: {
     //  Nav
@@ -102,45 +101,19 @@ export default {
 
 <style scoped>
 #content {
-  height: 100vh;
-  
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  transform: .5s;
-  text-align: center;
-	font-family: Oxygen
-
-}
-.wrapper{
-  margin-bottom: 50px;
-}
-h1{
-  transform: .2s;
-  font-size: 5.5em;
-		margin: 0;
-}
-p{
-  transform: .2s;
-}
-.faded{
-  opacity: 0;
-  transform: .2s;
 }
 </style>
 
 
-/**
-  mounted(){//生命周期模板挂载之后
-      let _this=this;
-      this.timer=setInterval(()=>{
-          _this.nowtime=new Date();
-      },1000)
-  },
-  beforeDestroy(){//生命周期实例销毁之前
-     if(this.timer){
-        clearInterval(this.timer);
-    }
- }  
- */
+//  1 mounted(){//生命周期模板挂载之后
+//  2     let _this=this;
+//  3     this.timer=setInterval(()=>{
+//  4         _this.nowtime=new Date();
+//  5     },1000)
+//  6 },
+//  7 beforeDestroy(){//生命周期实例销毁之前
+//  8     if(this.timer){
+//  9         clearInterval(this.timer);
+// 10     }
+// 11 }  
+

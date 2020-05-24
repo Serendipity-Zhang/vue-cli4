@@ -126,7 +126,7 @@ p{
 }
 .faded{
   opacity: 0;
-  transform: .2s;
+  transform: ,2s;
 }
 </style>
 

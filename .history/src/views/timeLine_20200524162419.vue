@@ -3,9 +3,9 @@
     <div id="app" class="ui container">
   <div class="cover">
     <div class="ui center aligned header">
-      
+      <img class="ui small circular image" src="http://realcombatmedia.com/wp-content/uploads/2014/04/Bruce-Lee-UFC-Square.jpg">
       <h2 class="ui inverted header">
-        哈哈哈
+        Bruce Lee
       </h2>    
       <button class="ui inverted button" v-on:click="toggleCategory()"><i class="tag icon"></i> Category</button>
     </div>
@@ -37,11 +37,7 @@ export default {
   },
   watch: {},
   computed: {},
-  methods: {
-    toggleCategory(){
-      this.toggleCat = !this.toggleCat;
-    }
-  },
+  methods: {},
   created() {},
   mounted() {}
 };

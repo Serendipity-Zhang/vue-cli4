@@ -102,34 +102,8 @@ export default {
 
 <style scoped>
 #content {
-  height: 100vh;
-  
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  transform: .5s;
-  text-align: center;
-	font-family: Oxygen
-
-}
-.wrapper{
-  margin-bottom: 50px;
-}
-h1{
-  transform: .2s;
-  font-size: 5.5em;
-		margin: 0;
-}
-p{
-  transform: .2s;
-}
-.faded{
-  opacity: 0;
-  transform: .2s;
 }
 </style>
-
 
 /**
   mounted(){//生命周期模板挂载之后

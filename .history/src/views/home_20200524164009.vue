@@ -20,19 +20,19 @@
 
 <script>
 // import Nav from './Nav'
-import moment from 'moment'
 export default {
   components: {
     //  Nav
   },
   data() {
-    return { 	contentStyle: {
+    return {
+     	contentStyle: {
 			backgroundColor: "#000000".replace(/0/g,function(){return (~~(Math.random()*16)).toString(16)})
 		},
-		timeOne: moment().format('LTS'),
-		timeTwo: moment().format('l'),
-		timeThree: moment().format('MMMM Do YY'),
-		timeFour: moment().format('LT'),
+		timeOne: this.moment().format('LTS'),
+		timeTwo: this.moment().format('l'),
+		timeThree: this.moment().format('MMMM Do YY'),
+		timeFour: this.moment().format('LT'),
 		one: true,
 		two: false,
 		three: false,
@@ -42,7 +42,7 @@ export default {
 		instructionsStyle: {
 			opacity: 1,
 			transition: '.2s'
-		}
+		}this.
     };
   },
   computed: {},
@@ -84,10 +84,10 @@ export default {
     },
   },
   mounted() {
-    console.log(moment().format("LTS"));
+    console.log(this.moment().format("LTS"));
     
     setInterval(() => {
-      this.timeOne = moment().format("LTS");
+      this.timeOne = this.moment().format("LTS");
     }, 1000);
   },
   beforeCreate() {}, //生命周期 - 创建之前
@@ -102,45 +102,5 @@ export default {
 
 <style scoped>
 #content {
-  height: 100vh;
-  
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  transform: .5s;
-  text-align: center;
-	font-family: Oxygen
-
-}
-.wrapper{
-  margin-bottom: 50px;
-}
-h1{
-  transform: .2s;
-  font-size: 5.5em;
-		margin: 0;
-}
-p{
-  transform: .2s;
-}
-.faded{
-  opacity: 0;
-  transform: .2s;
 }
 </style>
-
-
-/**
-  mounted(){//生命周期模板挂载之后
-      let _this=this;
-      this.timer=setInterval(()=>{
-          _this.nowtime=new Date();
-      },1000)
-  },
-  beforeDestroy(){//生命周期实例销毁之前
-     if(this.timer){
-        clearInterval(this.timer);
-    }
- }  
- */
