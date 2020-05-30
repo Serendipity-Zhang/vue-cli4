@@ -148,9 +148,7 @@ export default {
       this.provinceSelect = this.provice[0]
       
     },
-    provinceSelect(){
-      
-    },
+    provinceSelect(){},
   },
    mounted () {
      console.log(this.site_address);

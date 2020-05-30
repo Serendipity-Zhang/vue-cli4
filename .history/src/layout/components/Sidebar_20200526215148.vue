@@ -83,7 +83,7 @@ export default {
           {
               name:'watch',
               icon:'icon-biaoqingleiben',
-              url:'/watch'
+              url:'/study'
           }
       ]
     }

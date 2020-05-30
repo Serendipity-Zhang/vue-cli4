@@ -150,10 +150,10 @@ export default [
       {
         path: '/watch', 
         component: ()=>import('../layout/index'),
-        redirect:'/watch',
+        redirect:'/brother',
         children:[
           {
-            path: '/watch',
+            path: '/brother',
             component: ()=>import('../views/watch/index.vue'),
             meta:{
               title:'watch监听'

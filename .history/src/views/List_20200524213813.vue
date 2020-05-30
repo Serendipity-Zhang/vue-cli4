@@ -27,13 +27,13 @@
         <span>地区</span>
        
         <select name="" id="" v-model="provinceSelect">
-          <option :value="v" v-for="(v,i) in provice" :key="i">{{v.AddName}}</option>
+          <option value="" v-for="(v,i) in provice" :key="i"></option>
         </select>
          <select name="" id="" v-model="citySelect">
-          <option value="" v-for="(v,i) in city" :key="i">{{v.AddName}}</option>
+          <option value=""></option>
         </select>
          <select name="" id="" v-model="areaSelect">
-          <option value="" v-for="(v,i) in area" :key="i">{{v.AddName}}</option>
+          <option value=""></option>
         </select>
       </div>
     </div>
@@ -66,19 +66,14 @@
 </template>
 
 <script>
-import site_address from './areaIndex'
 export default {
   name: "",
   data() {
     return {
-      site_address,
       fromOne: { name: "", sex: "", age: "18" },
       provinceSelect:'',
       citySelect:'',
       areaSelect:'',
-      provice:[],
-      city:[],
-      area:[],
       checkAll: false, //全选
       lists: [
         { name: "张三1", sex: "男", city: "北京1", check: true },
@@ -89,38 +84,6 @@ export default {
         { name: "张三6", sex: "男", city: "北京6", check: false },
         { name: "张三7", sex: "男", city: "北京7", check: true },
       ],
-       listss:[
-                {
-                    id:0,
-                    name:'张三',
-                    sex:0,
-                    area:'北京市-北京市-柔坏区',
-                    age:16,
-                    province:{"ID": 2,"TopID": 0,"AddName": "北京市"},
-                    city:{"ID": 48,"TopID": 2,"AddName": "北京市"},
-                    nowarea:{"ID": 495,"TopID": 48,"AddName": "怀柔区"},
-                },
-                {
-                    id:1,
-                    name:'李四',
-                    sex:1,
-                    area:'北京市-北京市-柔坏区',
-                    age:28,
-                    province:{"ID": 2,"TopID": 0,"AddName": "北京市"},
-                    city:{"ID": 48,"TopID": 2,"AddName": "北京市"},
-                    nowarea:{"ID": 495,"TopID": 48,"AddName": "怀柔区"},
-                },
-                {
-                    id:2,
-                    name:'王五',
-                    sex:1,
-                    area:'北京市-北京市-柔坏区',
-                    age:30,
-                    province:{"ID": 2,"TopID": 0,"AddName": "北京市"},
-                    city:{"ID": 48,"TopID": 2,"AddName": "北京市"},
-                    nowarea:{"ID": 495,"TopID": 48,"AddName": "怀柔区"},
-                },
-            ],
     };
   },
   methods: {
@@ -139,25 +102,7 @@ export default {
       //every()  检测数组中的元素是否符合条件，都满足，返回true, 只要有一个没有满 足，返回false
       this.checkAll = this.lists.every((item) => item.check);
     },
-    getArea(){
-      this.provice = site_address.filter(item => item.TopID == 0)
-      this.city = site_address.filter(item => item.TopID == 1)
-      this.area = site_address.filter(item=>item.TopID==32);
-      console.log(this.provice[2]);
-      
-      this.provinceSelect = this.provice[0]
-      
-    },
-    provinceSelect(){
-      
-    },
   },
-   mounted () {
-     console.log(this.site_address);
-       console.log(site_address);
-     
-       this.getArea();
-    }
 };
 </script>
 

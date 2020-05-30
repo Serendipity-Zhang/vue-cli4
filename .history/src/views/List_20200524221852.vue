@@ -27,13 +27,13 @@
         <span>地区</span>
        
         <select name="" id="" v-model="provinceSelect">
-          <option :value="v" v-for="(v,i) in provice" :key="i">{{v.AddName}}</option>
+          <option :value="" v-for="(v,i) in provice" :key="i">{{v.AddName}}</option>
         </select>
          <select name="" id="" v-model="citySelect">
-          <option value="" v-for="(v,i) in city" :key="i">{{v.AddName}}</option>
+          <option value="" v-for="(v,i) in city" :key="i"></option>
         </select>
          <select name="" id="" v-model="areaSelect">
-          <option value="" v-for="(v,i) in area" :key="i">{{v.AddName}}</option>
+          <option value="" v-for="(v,i) in area" :key="i"></option>
         </select>
       </div>
     </div>
@@ -141,16 +141,11 @@ export default {
     },
     getArea(){
       this.provice = site_address.filter(item => item.TopID == 0)
-      this.city = site_address.filter(item => item.TopID == 1)
-      this.area = site_address.filter(item=>item.TopID==32);
-      console.log(this.provice[2]);
+      console.log(this.provice);
       
-      this.provinceSelect = this.provice[0]
-      
-    },
-    provinceSelect(){
-      
-    },
+    }
+    
+   
   },
    mounted () {
      console.log(this.site_address);

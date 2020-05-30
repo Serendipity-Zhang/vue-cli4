@@ -148,15 +148,15 @@ export default [
         ]
       },
       {
-        path: '/watch', 
+        path: '/brother', 
         component: ()=>import('../layout/index'),
-        redirect:'/watch',
+        redirect:'/brother',
         children:[
           {
-            path: '/watch',
-            component: ()=>import('../views/watch/index.vue'),
+            path: '/brother',
+            component: ()=>import('../views/Brother/index.vue'),
             meta:{
-              title:'watch监听'
+              title:'子传父'
             }
           }
         ]

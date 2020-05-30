@@ -7,7 +7,7 @@ import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 import moment from 'moment'
 import 'moment/locale/zh-cn'
-//import './assets/css/news.css'  
+import './assets/css/news.css'  
 
 moment.locale('zh-cn')
 

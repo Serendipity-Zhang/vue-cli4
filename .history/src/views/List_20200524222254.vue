@@ -143,14 +143,11 @@ export default {
       this.provice = site_address.filter(item => item.TopID == 0)
       this.city = site_address.filter(item => item.TopID == 1)
       this.area = site_address.filter(item=>item.TopID==32);
-      console.log(this.provice[2]);
-      
       this.provinceSelect = this.provice[0]
       
-    },
-    provinceSelect(){
-      
-    },
+    }
+    
+   
   },
    mounted () {
      console.log(this.site_address);
